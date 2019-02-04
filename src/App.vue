@@ -1,7 +1,6 @@
 <template>
   <div class="container-fluid">
     <app-navbar/>
-    <app-carousel/>
     <app-content/>
     <app-footer/>
   </div>
@@ -10,13 +9,11 @@
 <script>
 import Navbar from "./components/Navbar.vue";
 import Footer from "./components/Footer.vue";
-import Carousel from "./components/Carousel.vue";
 import Content from "./views/Content.vue";
 export default {
   components: {
     appNavbar: Navbar,
     appContent: Content,
-    appCarousel: Carousel,
     appFooter: Footer
   }
 };
@@ -36,6 +33,12 @@ export default {
       format("truetype"),
     url("//db.onlinewebfonts.com/t/663357fcaceba8348ec0998a7e3a2fb5.svg#ProhibitionW00-Regular")
       format("svg");
+}
+.navbar {
+  padding: 0.5rem 5vw;
+}
+.bg-transparent-blueviolet {
+  background-color: #59125ecc;
 }
 .bg-blueviolet {
   background-color: #59125e;
@@ -64,18 +67,14 @@ export default {
   padding: 0px;
 }
 .carousel-item {
-  height: 90vh;
+  height: 100vh;
   min-height: 300px;
-  background: no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 .img-fill {
   min-width: 100% !important;
   min-height: 100% !important;
   width: auto;
   height: auto;
+  margin: auto;
 }
 </style>

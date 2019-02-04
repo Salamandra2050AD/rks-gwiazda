@@ -1,11 +1,7 @@
 <template>
-  <b-row align-h="center">
-    <b-col cols="12" md="10">
-      <keep-alive>
-        <component :is="currentView.tag"/>
-      </keep-alive>
-    </b-col>
-  </b-row>
+  <keep-alive>
+    <component :is="currentView.tag"/>
+  </keep-alive>
 </template>
 
 <script>
