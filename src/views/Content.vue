@@ -1,7 +1,11 @@
 <template>
-  <keep-alive>
-    <component :is="currentView.tag"/>
-  </keep-alive>
+  <div class="pb-5 content">
+    <keep-alive>
+      <transition name="fade" mode="out-in" appear>
+        <component :is="currentView.tag"/>
+      </transition>
+    </keep-alive>
+  </div>
 </template>
 
 <script>
@@ -47,3 +51,13 @@ export default {
   }
 };
 </script>
+<style>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <appCarousel></appCarousel>
+    <appCarousel/>
     <app-about-us/>
     <app-gallery/>
     <app-prices/>

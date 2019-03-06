@@ -15,7 +15,7 @@
         @sliding-end="onSlideEnd"
       >
         <b-carousel-slide v-for="slide in slides" :key="slide.key" class="carousel-item">
-          <img slot="img" class="d-block img-fill" :src="slide.imgUrl" alt="image slot">
+          <img slot="img" class="d-block img-fill" :src="slide.imgUrl">
           <h1>{{slide.imgTitle}}</h1>
           <p>{{slide.imgDescription}}</p>
         </b-carousel-slide>

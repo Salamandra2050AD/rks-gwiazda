@@ -37,17 +37,20 @@ export default {
 .navbar {
   padding: 0.5rem 5vw;
 }
-.bg-transparent-blueviolet {
-  background-color: #59125ecc;
-}
+
 .bg-blueviolet {
-  background-color: #59125e;
+  background-color: #59125ee6;
+  -webkit-box-shadow: 0px 0px 13px 3px rgba(92, 10, 92, 1);
+  -moz-box-shadow: 0px 0px 13px 3px rgba(92, 10, 92, 1);
+  box-shadow: 0px 0px 13px 3px rgb(67, 21, 70);
 }
 .brand-name {
   line-height: 0.7rem;
   font-weight: normal;
   font-size: xx-large;
   font-family: "prohibition";
+}
+p:nth-child(2n-1) {
 }
 .brand-description {
   font-size: 11px;
@@ -56,18 +59,21 @@ export default {
 }
 .content {
   min-height: 90vh;
+  background-color: #fff9;
 }
 .row {
   margin: 0px;
 }
 .container-fluid {
   padding: 0px;
+  background-image: url(assets/bg.png);
 }
 .bg-carousel {
   padding: 0px;
+  /* mix-blend-mode: luminosity; */
 }
 .carousel-item {
-  height: 100vh;
+  height: 90vh;
   min-height: 300px;
 }
 .img-fill {
@@ -76,5 +82,13 @@ export default {
   width: auto;
   height: auto;
   margin: auto;
+}
+.footer {
+  min-height: 200px;
+  position: relative;
+}
+.img-thumbnail :hover {
+  mix-blend-mode: exclusion;
+  position: relative;
 }
 </style>
