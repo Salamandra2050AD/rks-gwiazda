@@ -1,7 +1,7 @@
 <template>
   <b-navbar toggleable="md" type="dark" sticky class="bg-blueviolet">
     <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-    <b-navbar-brand href="#" @click.prevent="navigate('app-home', 'Strona Główna')">
+    <router-link tag="b-navbar-brand" class="brand-name" to="/" exact>
       <img
         src="../assets/logo.png"
         alt
@@ -10,18 +10,17 @@
         width="auto"
         class="d-inline-block align-top"
       >
-    </b-navbar-brand>
+    </router-link>
     <b-collapse is-nav id="nav_collapse">
-      <b-navbar-brand
-        class="brand-name"
-        href="#"
-        @click.prevent="navigate('app-home', 'Strona Główna')"
-      >GWIAZDA
+      <router-link tag="b-navbar-brand" class="brand-name" to="/" exact>GWIAZDA
         <br>
         <span class="brand-description">Ruchomy Klub Sportowy</span>
-      </b-navbar-brand>
+      </router-link>
       <b-navbar-nav v-for="site in sites" :key="site.key" class="ml-auto">
-        <b-nav-item @click.prevent="navigate(site.tag, site.title)">{{site.title}}</b-nav-item>
+        <router-link :to="site.path" active-class="active" tag="li" class="nav-item">
+          <a class="nav-link">{{site.title}}</a>
+        </router-link>
+        <!-- <b-nav-item>{{site.title}}</b-nav-item> -->
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -35,34 +34,26 @@ export default {
       sites: [
         {
           title: "O NAS",
-          tag: "app-about-us",
+          path: "/about-us",
           key: 1
         },
         {
           title: "GALERIA",
-          tag: "app-gallery",
+          path: "/gallery",
           key: 2
         },
         {
           title: "CENNIK",
-          tag: "app-prices",
+          path: "/prices",
           key: 3
         },
         {
           title: "KONTAKT",
-          tag: "app-contact-us",
+          path: "/contact-us",
           key: 4
         }
       ]
     };
-  },
-  methods: {
-    navigate(newView, title) {
-      eventBus.$emit("changeView", {
-        tag: newView,
-        title: title
-      });
-    }
   }
 };
 </script>

@@ -34,6 +34,9 @@ export default {
     url("//db.onlinewebfonts.com/t/663357fcaceba8348ec0998a7e3a2fb5.svg#ProhibitionW00-Regular")
       format("svg");
 }
+.navbar-brand:hover {
+  cursor: pointer;
+}
 .navbar {
   padding: 0.5rem 5vw;
 }
@@ -49,8 +52,6 @@ export default {
   font-weight: normal;
   font-size: xx-large;
   font-family: "prohibition";
-}
-p:nth-child(2n-1) {
 }
 .brand-description {
   font-size: 11px;
