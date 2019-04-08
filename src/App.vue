@@ -34,6 +34,71 @@ export default {
     url("//db.onlinewebfonts.com/t/663357fcaceba8348ec0998a7e3a2fb5.svg#ProhibitionW00-Regular")
       format("svg");
 }
+.logo-1 {
+  mask-image: url(./assets/logo.png);
+  -webkit-mask-image: url(./assets/logo.png);
+  -webkit-mask-size: auto 50px;
+  mask-size: auto 50px;
+}
+.logo-2 {
+  mix-blend-mode: soft-light;
+}
+.logo-2:hover {
+  mix-blend-mode: unset;
+}
+.shine {
+  background-repeat: no-repeat;
+  background-position: -200px -200px, 0 0;
+  background-image: -webkit-linear-gradient(
+    top left,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 1) 45%,
+    rgba(255, 255, 255, 0) 50%
+  );
+  background-image: -moz-linear-gradient(
+    0 0,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 1) 45%,
+    rgba(255, 255, 255, 0) 50%
+  );
+  background-image: -o-linear-gradient(
+    0 0,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 1) 45%,
+    rgba(255, 255, 255, 0) 50%
+  );
+  background-image: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 1) 45%,
+    rgba(255, 255, 255, 0) 50%
+  );
+  -moz-background-size: 200% 200%, 100% 100%;
+  background-size: 200% 200%, 100% 100%;
+  -webkit-transition: background-position 0s ease;
+  -moz-transition: background-position 0s ease;
+  -o-transition: background-position 0s ease;
+  transition: background-position 0s ease;
+}
+
+.shine:hover {
+  background-position: 0 0, 0 0;
+
+  -webkit-transition-duration: 0.7s;
+  -moz-transition-duration: 0.7s;
+  transition-duration: 0.7s;
+}
+
+.nav-link {
+  font-family: "prohibition";
+  font-size: x-large;
+  padding: 0 !important;
+  line-height: 1.4rem;
+}
 .navbar-brand:hover {
   cursor: pointer;
 }
@@ -47,17 +112,7 @@ export default {
   -moz-box-shadow: 0px 0px 13px 3px rgba(92, 10, 92, 1);
   box-shadow: 0px 0px 13px 3px rgb(67, 21, 70);
 }
-.brand-name {
-  line-height: 0.7rem;
-  font-weight: normal;
-  font-size: xx-large;
-  font-family: "prohibition";
-}
-.brand-description {
-  font-size: 11px;
-  color: #431546;
-  text-shadow: 0px 0px 2px #fff;
-}
+
 .content {
   min-height: 90vh;
   background-color: #fff9;
@@ -71,7 +126,6 @@ export default {
 }
 .bg-carousel {
   padding: 0px;
-  /* mix-blend-mode: luminosity; */
 }
 .carousel-item {
   height: 90vh;
