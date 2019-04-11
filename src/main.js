@@ -6,6 +6,8 @@ import Gallery from "./views/Gallery.vue";
 import Prices from "./views/Prices.vue";
 import ContactUs from "./views/ContactUs.vue";
 import BootstrapVue from "bootstrap-vue";
+import axios from "axios";
+import VueAxios from "vue-axios";
 import App from "./App.vue";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
@@ -14,6 +16,7 @@ export const eventBus = new Vue();
 
 Vue.use(VueRouter);
 Vue.use(BootstrapVue);
+Vue.use(VueAxios, axios);
 
 const router = new VueRouter({
   routes: [
