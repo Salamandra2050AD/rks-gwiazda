@@ -1,19 +1,23 @@
 <template>
   <div class="container-fluid">
-    <app-navbar/>
-    <app-content/>
-    <app-footer/>
+    <app-navbar />
+    <div class="pb-5 content">
+      <keep-alive>
+        <transition name="fade" mode="out-in" appear>
+          <router-view></router-view>
+        </transition>
+      </keep-alive>
+    </div>
+    <app-footer />
   </div>
 </template>
 
 <script>
 import Navbar from "./components/Navbar.vue";
 import Footer from "./components/Footer.vue";
-import Content from "./views/Content.vue";
 export default {
   components: {
     appNavbar: Navbar,
-    appContent: Content,
     appFooter: Footer
   }
 };
@@ -33,6 +37,13 @@ export default {
       format("truetype"),
     url("//db.onlinewebfonts.com/t/663357fcaceba8348ec0998a7e3a2fb5.svg#ProhibitionW00-Regular")
       format("svg");
+}
+.row {
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+}
+.sticky-top {
+  z-index: 20 !important;
 }
 .logo-1 {
   mask-image: url(./assets/logo.png);
@@ -93,6 +104,15 @@ export default {
   transition-duration: 0.7s;
 }
 
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
 .nav-link {
   font-family: "prohibition";
   font-size: x-large;
@@ -105,7 +125,15 @@ export default {
 .navbar {
   padding: 0.5rem 5vw;
 }
-
+.v--modal-overlay .v--modal-background-click {
+  background-color: #59125e75;
+  padding-top: 4rem;
+}
+.v--modal-overlay .v--modal-box {
+  -webkit-box-shadow: 0px 0px 100px 44px rgba(89, 18, 94, 1);
+  -moz-box-shadow: 0px 0px 100px 44px rgba(89, 18, 94, 1);
+  box-shadow: 0px 0px 100px 44px rgba(89, 18, 94, 1);
+}
 .bg-blueviolet {
   background-color: #59125ee6;
   -webkit-box-shadow: 0px 0px 13px 3px rgba(92, 10, 92, 1);
@@ -121,7 +149,7 @@ export default {
   margin: 0px;
 }
 .container-fluid {
-  padding: 0px;
+  padding: 0px !important;
   background-image: url(assets/bg.png);
 }
 .bg-carousel {

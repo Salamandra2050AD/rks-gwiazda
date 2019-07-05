@@ -4,6 +4,7 @@
     <app-about-us/>
     <app-gallery/>
     <app-prices/>
+    <app-contact-us/>
   </div>
 </template>
 
