@@ -15,7 +15,7 @@
     "bootstrap": "^4.0.0-beta.2",
     "bootstrap-vue": "^2.0.0-rc.24",
     "core-js": "^2.6.5",
-    "express": "^4.16.4",
+    "express": "^4.17.1",
     "popper.js": "^1.12.9",
     "vue": "^2.6.10",
     "vue-axios": "^2.1.4",

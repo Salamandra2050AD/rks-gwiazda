@@ -86,12 +86,12 @@ export default {
           this.full_view_index = i;
           // eslint-disable-next-line
           console.log(this.full_view_html);
+          this.show();
         })
         // .then(() => {
         // })
         .then(() => {
           window.instgrm.Embeds.process();
-          this.show();
         })
         .catch(function(error) {
           // eslint-disable-next-line
