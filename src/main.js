@@ -29,7 +29,14 @@ const router = new VueRouter({
     { path: "/contact-us", component: ContactUs },
     { path: "/*", component: Home }
   ],
-  mode: "history"
+  mode: "history",
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    } else {
+      return { x: 0, y: 0 };
+    }
+  }
 });
 
 new Vue({

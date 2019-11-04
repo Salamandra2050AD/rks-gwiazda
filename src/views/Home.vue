@@ -1,10 +1,10 @@
 <template>
   <div>
-    <appCarousel :slides="slides"/>
-    <app-about-us/>
-    <app-gallery/>
-    <app-prices/>
-    <app-contact-us/>
+    <appCarousel :slides="slides" />
+    <app-about-us />
+    <app-gallery />
+    <app-prices />
+    <app-contact-us />
   </div>
 </template>
 
@@ -21,21 +21,23 @@ export default {
     return {
       slides: [
         {
-          imgUrl: "https://picsum.photos/1024/480/?image=55",
-          imgTitle: "Obrazek pierwszy",
-          imgDescription: "To jest opis pierwszego slajdu",
+          imgUrl: require("@/assets/car01.jpg"),
+          imgTitle: "Queer-Fight Team",
+          imgDescription:
+            "Dołącz do równościowej społeczności wspierającej się w drodze do stania się najlepszą wersją siebie.",
           key: 1
         },
         {
-          imgUrl: "https://picsum.photos/1024/480/?image=54",
-          imgTitle: "Obrazek drugi",
-          imgDescription: "To jest opis drugiego slajdu",
+          imgUrl: require("@/assets/car02.jpg"),
+          imgTitle: "Partycypacja członkowska",
+          imgDescription:
+            "RKS-Gwiazda jest klubem zarządzanym przez społeczność go tworzącą.",
           key: 2
         },
         {
-          imgUrl: "https://picsum.photos/1024/480/?image=53",
-          imgTitle: "Obrazek trzeci",
-          imgDescription: "To jest opis trzeciego slajdu",
+          imgUrl: require("@/assets/car03.jpg"),
+          imgTitle: "",
+          imgDescription: "",
           key: 3
         }
       ]

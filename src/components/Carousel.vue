@@ -1,5 +1,4 @@
 <template>
-  <!-- <b-row class="content"> -->
   <div class="bg-carousel">
     <b-carousel
       id="carousel1"
@@ -7,7 +6,7 @@
       controls
       indicators
       background="#ababab"
-      :interval="4000"
+      :interval="5000"
       img-width="1024"
       img-height="480"
     >
@@ -18,7 +17,6 @@
       </b-carousel-slide>
     </b-carousel>
   </div>
-  <!-- </b-row> -->
 </template>
 <script>
 export default {
@@ -29,3 +27,11 @@ export default {
   }
 };
 </script>
+<style>
+.img-fill {
+  min-width: 100% !important;
+  min-height: 100% !important;
+  width: auto;
+  height: auto;
+}
+</style>

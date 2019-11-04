@@ -18,7 +18,7 @@
           />
         </b-col>
         <b-col cols="12" class="pt-5">
-          <h2 @click="getMoreGrams()" class="load-more">WIĘCEJ</h2>
+          <button @click="getMoreGrams()" class="load-more btn-hexagon">WIĘCEJ</button>
         </b-col>
       </b-row>
       <v-modal name="full-view" :scrollable="true" height="auto">
@@ -86,12 +86,10 @@ export default {
           this.full_view_index = i;
           // eslint-disable-next-line
           console.log(this.full_view_html);
-          this.show();
         })
-        // .then(() => {
-        // })
         .then(() => {
           window.instgrm.Embeds.process();
+          this.show();
         })
         .catch(function(error) {
           // eslint-disable-next-line
@@ -112,16 +110,53 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .img-thumbnail {
   min-width: 100%;
   height: auto;
   cursor: pointer;
 }
 .load-more {
-  color: #59125ee6;
-  font-weight: 100;
-  font-family: fantasy;
-  cursor: pointer;
+  font-weight: 900;
+  margin: auto;
+}
+.btn-hexagon {
+  position: relative;
+  display: block;
+  background: #59125ee6;
+  color: rgba(255, 255, 255, 0.5);
+  width: 180px;
+  height: 60px;
+  border: none;
+  line-height: 60px;
+  text-align: center;
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 40px auto;
+  -webkit-clip-path: polygon(
+    6.67% 0,
+    93.33% 0,
+    100% 20%,
+    100% 80%,
+    93.33% 100%,
+    6.67% 100%,
+    0% 80%,
+    0% 20%
+  );
+  clip-path: polygon(
+    6.67% 0,
+    93.33% 0,
+    100% 20%,
+    100% 80%,
+    93.33% 100%,
+    6.67% 100%,
+    0% 80%,
+    0% 20%
+  );
+}
+
+.btn-hexagon:hover {
+  color: rgba(255, 255, 255, 0.75);
 }
 </style>

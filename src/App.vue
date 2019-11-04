@@ -38,6 +38,62 @@ export default {
     url("//db.onlinewebfonts.com/t/663357fcaceba8348ec0998a7e3a2fb5.svg#ProhibitionW00-Regular")
       format("svg");
 }
+@font-face {
+  font-family: "Nunito";
+  src: url("./assets/fonts/Nunito-Regular.ttf");
+}
+@keyframes neon {
+  0%,
+  9%,
+  16%,
+  34%,
+  46%,
+  52%,
+  67%,
+  85%,
+  91%,
+  95%,
+  100% {
+    mix-blend-mode: exclusion;
+    -webkit-filter: none;
+    -moz-filter: none;
+    -ms-filter: none;
+    -o-filter: none;
+    filter: none;
+  }
+  10%,
+  15%,
+  35%,
+  45%,
+  53%,
+  66%,
+  86%,
+  90%,
+  96%,
+  99% {
+    mix-blend-mode: screen;
+    -webkit-filter: drop-shadow(2px 2px 3px #f56cff)
+      drop-shadow(-2px 2px 3px #f56cff) drop-shadow(2px -2px 3px #f56cff)
+      drop-shadow(-2px -2px 3px #f56cff);
+    -moz-filter: drop-shadow(2px 2px 3px #f56cff)
+      drop-shadow(-2px 2px 3px #f56cff) drop-shadow(2px -2px 3px #f56cff)
+      drop-shadow(-2px -2px 3px #f56cff);
+    -ms-filter: drop-shadow(2px 2px 3px #f56cff)
+      drop-shadow(-2px 2px 3px #f56cff) drop-shadow(2px -2px 3px #f56cff)
+      drop-shadow(-2px -2px 3px #f56cff);
+    -o-filter: drop-shadow(2px 2px 3px #f56cff)
+      drop-shadow(-2px 2px 3px #f56cff) drop-shadow(2px -2px 3px #f56cff)
+      drop-shadow(-2px -2px 3px #f56cff);
+    filter: drop-shadow(2px 2px 3px #f56cff) drop-shadow(-2px 2px 3px #f56cff)
+      drop-shadow(2px -2px 3px #f56cff) drop-shadow(-2px -2px 3px #f56cff);
+  }
+}
+body {
+  font-family: "Nunito", sans-serif !important;
+}
+p {
+  font-size: 1.2rem;
+}
 .row {
   margin-right: 0px !important;
   margin-left: 0px !important;
@@ -51,12 +107,7 @@ export default {
   -webkit-mask-size: auto 50px;
   mask-size: auto 50px;
 }
-.logo-2 {
-  mix-blend-mode: soft-light;
-}
-.logo-2:hover {
-  mix-blend-mode: unset;
-}
+
 .shine {
   background-repeat: no-repeat;
   background-position: -200px -200px, 0 0;
@@ -159,19 +210,40 @@ export default {
   height: 90vh;
   min-height: 300px;
 }
-.img-fill {
-  min-width: 100% !important;
-  min-height: 100% !important;
-  width: auto;
-  height: auto;
-  margin: auto;
-}
-.footer {
-  min-height: 200px;
+footer {
+  min-height: 30px;
   position: relative;
 }
-.img-thumbnail :hover {
+footer img {
+  width: 100%;
+  margin-top: 25px;
   mix-blend-mode: exclusion;
+  mask-image: url(./assets/created-by-salamandra-s.png);
+  -webkit-mask-image: url(./assets/created-by-salamandra-s.png);
+  -webkit-mask-size: 100% auto;
+  mask-size: 100% auto;
+}
+
+footer img:hover {
+  animation: neon 0.5s 2;
+  mix-blend-mode: screen;
+  cursor: pointer;
+  -webkit-filter: drop-shadow(2px 2px 5px #f56cff)
+    drop-shadow(-2px 2px 5px #f56cff) drop-shadow(2px -2px 5px #f56cff)
+    drop-shadow(-2px -2px 5px #f56cff);
+  -moz-filter: drop-shadow(2px 2px 5px #f56cff)
+    drop-shadow(-2px 2px 5px #f56cff) drop-shadow(2px -2px 5px #f56cff)
+    drop-shadow(-2px -2px 5px #f56cff);
+  -ms-filter: drop-shadow(2px 2px 5px #f56cff) drop-shadow(-2px 2px 5px #f56cff)
+    drop-shadow(2px -2px 5px #f56cff) drop-shadow(-2px -2px 5px #f56cff);
+  -o-filter: drop-shadow(2px 2px 5px #f56cff) drop-shadow(-2px 2px 5px #f56cff)
+    drop-shadow(2px -2px 5px #f56cff) drop-shadow(-2px -2px 5px #f56cff);
+  filter: drop-shadow(2px 2px 5px #f56cff) drop-shadow(-2px 2px 5px #f56cff)
+    drop-shadow(2px -2px 5px #f56cff) drop-shadow(-2px -2px 5px #f56cff);
+}
+
+.img-thumbnail:hover {
+  mix-blend-mode: hard-light;
   position: relative;
 }
 </style>

@@ -9,7 +9,7 @@
         height="50"
         width="auto"
         class="d-inline-block align-top shine logo-1"
-      >
+      />
     </router-link>
     <b-collapse is-nav id="nav_collapse">
       <b-navbar-nav v-for="site in sites" :key="site.key" class="ml-auto">
@@ -37,7 +37,7 @@ export default {
           key: 2
         },
         {
-          title: "CENNIK",
+          title: "CENY",
           path: "/prices",
           key: 3
         },
