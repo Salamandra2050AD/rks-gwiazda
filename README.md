@@ -1,4 +1,5 @@
-# hello-world
+# RKS-Gwiazda
+Website of inclusive martial art gym and community, preview of work in progress https://rks-gwiazda.herokuapp.com/
 
 ## Project setup
 ```

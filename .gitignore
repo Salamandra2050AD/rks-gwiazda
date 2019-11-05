@@ -21,4 +21,4 @@ yarn-error.log*
 *.sw?
 
 #private variables
-# /access_token.js
+/access_token.js
